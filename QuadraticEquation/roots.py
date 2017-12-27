@@ -1,18 +1,15 @@
 # ask user for a triple
-a = input("Please insert coefficient a: ")
-b = input("Please insert coefficient b: ")
-c = input("please insert coefficient c: ")
+coeffs = [input('insert coeff ' + str(i+1) + ' : ') for i in range(3)]
 
 # Calculating delta
-delta = b**2 - 4*a*c
+delta = coeffs[1]**2 - 4 * coeffs[0] * coeffs[2]
+
 if delta > 0:
-    x_1 = (-b - sqrt(delt)) / 2*a
-    x_2 = (-b + sqrt(delt)) / 2*a
+    x_1 = (-coeffs[1] - sqrt(delt)) / (2 * coeffs[0])
+    x_2 = (-coeffs[1] + sqrt(delt)) / (2 * coeffs[0])
     print(x_1, x_2)
-
-if delta == 0:
-    x = -b / (2*a)
+elif delta == 0:
+    x = -coeffs[1] / (2*coeffs[0])
     print(x)
-
-if delta < 0:
+else:
     print(":D nadarim agha")
