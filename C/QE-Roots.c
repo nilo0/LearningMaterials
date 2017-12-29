@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-
-float delta(float aa, float bb, float cc)
-{
-  return (bb * bb) - (4 * aa * cc);
-}
+#include "./delta.hrm"
 
 int main()
 {
