@@ -1,18 +1,12 @@
-# calculating the value of a given polynomial
-def Poly(A, x):
-	return sum([ai * x**i for (i, ai) in enumerate(A)])
-
-# calculating the value of the differential of a given polynomial
-def dPoly(A, x):
-	return sum([ai * i * x**(i-1) for (i, ai) in enumerate(A) if i != 0])
+from MyModules import polynomial as poly
 
 # calculating the Newton Method for a given polynomial and a precission
 def newton(A, x, e):
-	if Poly(A, x) <= e:
-		print "x: ", x, "f(x) = ", Poly(A, x)
+	if poly.calc(A, x) <= e:
+		print "x: ", x, "f(x) = ", poly.calc(A, x)
 		return
 
-	newton(A, x - (Poly(A, x) / dPoly(A, x)), e)
+	newton(A, x - (poly.calc(A, x) / poly.diff(A, x)), e)
 
 
 # reading input from user
