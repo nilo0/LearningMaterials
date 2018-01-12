@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <math.h>
-#include "./qe_roots.h"
+#include "./../header/qe.h"
+
 
 int main()
 {

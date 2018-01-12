@@ -1,9 +1,15 @@
 #include <math.h>
-#include "./delta.h"
+
+
+float qe_delta(float aa, float bb, float cc)
+{
+  return (bb * bb) - (4 * aa * cc);
+}
+
 
 void qe_roots(float a, float b, float c, float x1[2], float x2[2])
 {
-  float d = delta(a, b, c);
+  float d = qe_delta(a, b, c);
   if(d >= 0)
   {
     x1[0] = (-b + sqrt(d)) / (2 * a);
