@@ -1,4 +1,4 @@
-import quadratic_equation as qe
+from lib import quadratic_equation as qe
 
 # ask user for coefficients
 C = [input('insert coeff ' + str(i+1) + ' : ') for i in range(3)]
