@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "./../header/qe.h"
+#include "./../include/qe.h"
 
 
 int main()
